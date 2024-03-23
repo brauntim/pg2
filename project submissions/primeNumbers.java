@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class primeNumbers {
     public static void main(String[] args) {
 
