@@ -1,2 +1,2 @@
 # pg2
-java projects
+This repository is used to save every necessary coding project, that is needed to complete my java-programming module.
