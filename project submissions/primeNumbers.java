@@ -1,19 +1,22 @@
-public class primeNumbers {
+public class Main {
     public static void main(String[] args) {
 
-        for (int counter = 1; counter <= 1000; counter++) {
+        for (int checkNum = 1; checkNum <= 1000; checkNum++) {
             boolean isPrime = true;
 
-            for (int checkNum = 2; checkNum <= counter / 2; checkNum++) {
+            for (int divider = 2; divider <= checkNum / 2; divider++) {
 
-                if (counter % checkNum == 0) {
+                if (checkNum % divider == 0) {
                     isPrime = false;
                     break;
                 }
             }
             if (isPrime) {
-                System.out.println(counter);
+                System.out.println(checkNum);
             }
         }
     }
 }
+
+//  1   2   3   4   5   6       7       8       9       10
+//      1   1   12  12  123     123     1234    1234    12345
