@@ -1,24 +1,28 @@
 public abstract class Abrechnung {
     private int periode;
     private Mitarbeiter mitarbeiter;
-    public Abrechnung (int periode, Mitarbeiter m) {
+
+    public Abrechnung(int periode, Mitarbeiter m) {
         this.periode = periode;
         mitarbeiter = m;
     }
+
     public int getPeriode() {
         return periode;
     }
-    public Mitarbeiter getMitarbeiter () {
+
+    public Mitarbeiter getMitarbeiter() {
         return mitarbeiter;
     }
 
-    public abstract double getVerdienst ();
+    public abstract double getVerdienst();
 
-    public String toString () {
-        return periode +", "+ mitarbeiter.getName()+", " + getVerdienst();
+    public String toString() {
+        return periode + ", " + mitarbeiter.getName() + ", " + getVerdienst();
     }
 
-    public class GehaltsAbrechnung extends Abrechnung {
+}
+     class GehaltsAbrechnung extends Abrechnung {
         private double gehalt;
         public GehaltsAbrechnung (int periode, Mitarbeiter m, double gehalt) {
             super(periode, m);
@@ -29,7 +33,9 @@ public abstract class Abrechnung {
         }
     }
 
-    public class LohnAbrechnung extends Abrechnung {
+
+
+     class LohnAbrechnung extends Abrechnung {
         private double stundenLohn;
         private double anzahlStunden;
 
@@ -45,4 +51,3 @@ public abstract class Abrechnung {
         }
     }
 
-}

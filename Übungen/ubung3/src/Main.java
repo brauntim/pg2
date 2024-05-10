@@ -10,10 +10,12 @@ public class Main {
         pv.addMitarbeiter(m3);
 
         pv.listMitarbeiter();
-        pv.sortMitarbeiter();
-        pv.listMitarbeiter();
 
+    GehaltsAbrechnung gehaltsAbrechnung1 = new GehaltsAbrechnung(1, m1, 4000.0);
+    LohnAbrechnung lohnAbrechnung1 = new LohnAbrechnung(2,m3, 20, 160);
 
+        System.out.println("\n"+ gehaltsAbrechnung1);
+        System.out.println(lohnAbrechnung1);
 
     }
 }
